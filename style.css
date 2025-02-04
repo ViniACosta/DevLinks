@@ -28,18 +28,12 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  transition: background 0.5s ease;
   height: 100vh;
 }
 
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  transition: color 0.5s ease;
-}
-
-html {
-  transition: background-color 0.5s ease;
 }
 
 #container {
@@ -67,9 +61,9 @@ html {
 
 /*------ SWITCH ------*/
 #switch {
-    position: relative;
-    width: 64px;
-    margin: 4px auto;
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
 }
 
 #switch button {
@@ -85,11 +79,15 @@ html {
   z-index: 1;
   transform: translateY(-50%);
   transition: left 0.5s ease, right 0.5s ease;
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -154,11 +152,30 @@ ul li a:hover {
 
 /*----- MEDIA QUERIES -----*/
 @media (min-width: 700px) {
-  :root{
+  :root {
     --bg-url: url(assets/bg-desktop.jpg);
   }
 
   .light {
     --bg-url: url(assets/bg-desktop-light.jpg);
+  }
+}
+
+/* ANIMATION */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
