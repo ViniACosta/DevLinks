@@ -76,12 +76,6 @@ Modifique a seção `social-links` no arquivo `index.html`:
 
 2. Atualize os caminhos no arquivo `script.js` se necessário.
 
-## 📱 Preview
-
-Dark Mode | Light Mode
-:-------------------------:|:-------------------------:
-![Dark Mode](assets/preview-dark.png) | ![Light Mode](assets/preview-light.png)
-
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
